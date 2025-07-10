@@ -1,0 +1,47 @@
+# Python bytecode and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+
+# Virtual environments
+.venv/
+env/
+*.egg-info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and runtime files
+*.log
+*.out
+*.pid
+
+# Environment variables and secrets
+.env
+*.key
+*.pem
+credentials.json
+
+# Build artifacts
+build/
+dist/
+*.egg
+*.manifest
+
+# Testing and coverage
+.coverage
+htmlcov/
+.tox/
+.cache/
+pytest_cache/
+
+# Notebook metadata (optional)
+*.nbconvert.ipynb
