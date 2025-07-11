@@ -6,6 +6,7 @@ Use '/' between morse characters to leave a space between words.
 
 ## Features
 - Encode text to Morse
+- Decode Morse to text
 - Based on a CSV lookup table
 
 ## Requirements
