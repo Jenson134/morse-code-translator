@@ -1,24 +1,28 @@
 from translator import Translate
 
 def run():
-    morse_input = input('Enter your morse code message below ("q" to exit):\n')
-    while morse_input != 'q':
-        translator = Translate(morse_input)
-        valid = translator.check_is_valid()
+    user_input = input('Enter your morse code message below ("q" to exit):\n')
+    while user_input != 'q':
+        translator = Translate(user_input)
+        valid, morse_or_eng = translator.check_is_valid()
 
         if valid:
-            word = translator.translate()
-            if not word:
+            if morse_or_eng == 0: 
+                output = translator.translate_morse()
+            elif morse_or_eng == 1:
+                output = translator.translate_english()
+
+            if not output:
                 pass
             else:
-                print(f"{morse_input} --> {word}")
+                print(f"{user_input} --> {output}")
         else:
             try:
-                raise ValueError('Unrecognized Morse Code')
+                raise ValueError(f'Unrecognized Entry {user_input}')
             except ValueError as e:
                 print('Value Error:', e)
     
-        morse_input = input('Enter your morse code message below ("q" to exit):\n')
+        user_input = input('Enter your morse code/ english message below ("q" to exit):\n')
 
 if __name__ == '__main__':
     run()
